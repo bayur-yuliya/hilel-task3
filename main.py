@@ -22,7 +22,7 @@ def index():
         return requirements_packages
 
     except FileNotFoundError:
-        return "Немає такого файлу"
+        return "<h2>Немає такого файлу</h2>"
 
 
 @app.route('/users/generate')
@@ -74,7 +74,7 @@ def mean():
         return f"Середній зріст: {average_height_cm}, середня вага: {average_weight_kg}"
 
     except FileNotFoundError:
-        return f"Не найден файл"
+        return "<h2>Не найден файл</h2>"
 
 
 @app.route('/space/')
@@ -86,7 +86,7 @@ def space():
     elif query.json()['people']:
         a = len(query.json()['people'])
     else:
-        return " Невказвна кількість космонавтів на орбіті"
+        return "<h2>Невказвна кількість космонавтів на орбіті</h2>"
 
     return f' Kількість космонавтів на орбіті: {a}'
 
