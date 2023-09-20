@@ -1,7 +1,8 @@
-from flask import Flask, request
-from faker import Faker
-import requests
 import csv
+
+import requests
+from faker import Faker
+from flask import Flask, request
 
 app = Flask(__name__)
 fake = Faker()
